@@ -1,14 +1,16 @@
 package com;
 
+import com.adding.AddingAddress;
 import com.adding.RegistrationUser;
-import com.entities.User;
-import com.work_with_file.ReaderFile;
-
-import java.io.FileNotFoundException;
+import com.workWithFile.ReaderFile;
 
 public class Start {
     public static void main(String[] args) {
-        ReaderFile readerFile = new ReaderFile();
-        readerFile.readingFile();
+        ReaderFile reader = new ReaderFile("C:\\Users\\Евгений\\Desktop\\newUser.txt");
+        RegistrationUser reg = new RegistrationUser();
+        AddingAddress addAddr = new AddingAddress();
+        reg.registerUser(reader.registrationUser());
+        addAddr.addingNewAddress(reader.addingAddress());
+
     }
 }
