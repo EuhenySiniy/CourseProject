@@ -1,0 +1,7 @@
+REGISTRATION,Синий,Евгений,Юрьевич,ibookmack@gmail.com,0730937947
+REGISTRATION,Сафонов,Иван,Олегович,ivan999@gmail.com,0996588888
+REGISTRATION,Богдан,Иван,Алексеевич,vanya@gmail.com,0633578965
+ADDADDRESS,Днепр,ж/м Покровский,4Д,15,ibookmack@gmail.com
+ADDADDRESS,Житомир,просп.Александра Поля,15,89,ivan999@gmail.com
+ADDADDRESS,Киев,ул. Ивана Акинфиева,18,5,vanya@gmail.com
+ADDSAMPLE,Gas Company,UA00000000000000000000000000000,For gas from
