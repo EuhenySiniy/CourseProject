@@ -70,18 +70,17 @@ public class ReaderFile {
         return addressInfo;
     }
 
-    public ArrayList<String> getSampleInfo() {
+    public List<String> getSampleInfo() {
         BufferedReader reader = null;
-        ArrayList<String> addSample = new ArrayList<>();
+        List<String> sampleInfo = new ArrayList<>();
         try {
             reader = new BufferedReader(new FileReader(path));
             while ((fileContent = reader.readLine()) != null) {
                 temp = fileContent.split(",");
                 if (temp[0].equals("ADDSAMPLE")) {
                     for(int i = 1; i < temp.length; i++) {
-                        addSample.add(temp[i]);
+                        sampleInfo.add(temp[i]);
                     }
-                    System.out.println(addSample);
                 }
             }
         } catch (IOException e) {
@@ -95,7 +94,7 @@ public class ReaderFile {
                 }
             }
         }
-        return addSample;
+        return sampleInfo;
     }
 
 }

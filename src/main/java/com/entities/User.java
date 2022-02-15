@@ -15,6 +15,9 @@ public class User {
         this.tel = tel;
     }
 
+    public User() {
+    }
+
     public String getFirstName() {
         return firstName;
     }

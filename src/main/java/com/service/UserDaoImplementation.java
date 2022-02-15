@@ -1,5 +1,6 @@
-package com.DAO;
+package com.service;
 
+import com.DAO.UserDao;
 import com.entities.User;
 import com.jdbc.Connector;
 
@@ -11,7 +12,6 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class UserDaoImplementation implements UserDao {
-
     @Override
     public boolean createNewUsers(List<User> userList) {
         String sql = "INSERT INTO users (first_name, middle_name, last_name, email, tel) VALUES (?,?,?,?,?)";
@@ -69,21 +69,7 @@ public class UserDaoImplementation implements UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            Connector.closeConnection();
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if(resultSet != null) {
-                try {
-                    resultSet.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+            releasingResources(statement, resultSet);
         }
         return user;
     }
@@ -118,5 +104,23 @@ public class UserDaoImplementation implements UserDao {
             }
         }
         return true;
+    }
+
+    private void releasingResources(PreparedStatement statement, ResultSet resultSet) {
+        Connector.closeConnection();
+        if(statement != null) {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(resultSet != null) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

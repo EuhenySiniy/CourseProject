@@ -1,9 +1,11 @@
 package com;
 
-import com.DAO.AddressDaoImplementation;
+import com.adding.AddingSample;
+import com.service.AddressDaoImplementation;
 import com.adding.AddingAddress;
 import com.adding.RegistrationUser;
-import com.DAO.UserDaoImplementation;
+import com.service.SampleDaoImplementation;
+import com.service.UserDaoImplementation;
 import com.workWithFile.ReaderFile;
 
 public class Start {
@@ -11,10 +13,16 @@ public class Start {
         ReaderFile reader = new ReaderFile("C:\\Users\\Евгений\\IdeaProjects\\CourseProject\\src\\main\\resources\\commands.txt");
         UserDaoImplementation userDAO = new UserDaoImplementation();
         AddressDaoImplementation addressDao = new AddressDaoImplementation();
+        SampleDaoImplementation sampleDao = new SampleDaoImplementation();
         RegistrationUser registrationNewUser = new RegistrationUser();
         AddingAddress address = new AddingAddress();
+        AddingSample sample = new AddingSample();
         // userDAO.createNewUsers(registrationNewUser.registerUser(reader.getUsersInfo()));
         // addressDao.createNewAddress(address.addingNewAddress(reader.getAddressInfo()));
-        addressDao.deleteAddress("ibookmack@gmail.com");
+        // addressDao.deleteAddress("ibookmack@gmail.com");
+        // sample.addingNewSample(reader.getSampleInfo());
+        // addressDao.getAllUserAddresses("ibookmack@gmail.com");
+        sampleDao.getSample("UA000000000000000000000000000");
+
     }
 }

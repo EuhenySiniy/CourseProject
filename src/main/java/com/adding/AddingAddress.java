@@ -7,12 +7,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class AddingAddress {
-    private UserAddress newAddress;
-
-    public AddingAddress() {
-    }
 
     public List addingNewAddress(List<String> info) {
+        UserAddress newAddress;
         List<UserAddress> newAddresses = new ArrayList<>();
         ListIterator<String> iterator = info.listIterator();
         while(iterator.hasNext()) {
