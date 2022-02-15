@@ -27,7 +27,6 @@ public class AddingSample {
                 };
             }
             newSamples.add(newSample);
-            System.out.println(newSample);
         }
         return newSamples;
     }

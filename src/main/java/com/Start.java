@@ -17,12 +17,8 @@ public class Start {
         RegistrationUser registrationNewUser = new RegistrationUser();
         AddingAddress address = new AddingAddress();
         AddingSample sample = new AddingSample();
-        // userDAO.createNewUsers(registrationNewUser.registerUser(reader.getUsersInfo()));
-        // addressDao.createNewAddress(address.addingNewAddress(reader.getAddressInfo()));
-        // addressDao.deleteAddress("ibookmack@gmail.com");
-        // sample.addingNewSample(reader.getSampleInfo());
-        // addressDao.getAllUserAddresses("ibookmack@gmail.com");
-        sampleDao.getSample("UA000000000000000000000000000");
-
+        userDAO.createNewUsers(registrationNewUser.registerUser(reader.getUsersInfo()));
+        addressDao.createNewAddress(address.addingNewAddress(reader.getAddressInfo()));
+        sampleDao.createNewSample(sample.addingNewSample(reader.getSampleInfo()));
     }
 }

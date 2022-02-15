@@ -1,9 +1,7 @@
 REGISTRATION,Синий,Евгений,Юрьевич,ibookmack@gmail.com,0730937947
-REGISTRATION,Сафонов,Иван,Олегович,ivan999@gmail.com,0996588888
-REGISTRATION,Богдан,Иван,Алексеевич,vanya@gmail.com,0633578965
 ADDADDRESS,Днепр,ж/м Покровский,4Д,15,ibookmack@gmail.com
-ADDADDRESS,Житомир,просп.Александра Поля,15,89,ivan999@gmail.com
-ADDADDRESS,Киев,ул. Ивана Акинфиева,18,5,vanya@gmail.com
+ADDADDRESS,Каменское,просп.Победы,69,90,ibookmack@gmail.com
 ADDSAMPLE,Gas Company,UA000000000000000000000000000,87999963,Payment for gas,ibookmack@gmail.com,ж/м Покровский,15
 ADDSAMPLE,SpaceX,UA543054820000026035304821893,42082379,Payment for communication,ibookmack@gmail.com,ж/м Покровский,15
-ADDSAMPLE,Light supplier,UA723052990000026002050254346,39968744,Payment for light,ibookmack@gmail.com,ж/м Покровский,15
+ADDSAMPLE,Light supplier,UA723052990000026002050254346,39968744,Payment for light,ibookmack@gmail.com,просп.Победы,90
+ADDSAMPLE,Water supplier,UA800147550000045667458566546,56678996,Payment for cold water,ibookmack@gmail.com,просп.Победы,90
