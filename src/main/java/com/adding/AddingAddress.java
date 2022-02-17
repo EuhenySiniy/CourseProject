@@ -14,10 +14,10 @@ public class AddingAddress {
         ListIterator<String> iterator = info.listIterator();
         while(iterator.hasNext()) {
             newAddress = new UserAddress(iterator.next(),
-                                        iterator.next(),
-                                        iterator.next(),
-                                        Integer.parseInt(iterator.next()),
-                                        iterator.next());
+                    iterator.next(),
+                    iterator.next(),
+                    Integer.parseInt(iterator.next()),
+                    iterator.next());
             if(iterator.nextIndex() == 5) {
                 while(iterator.hasPrevious()) {
                     iterator.previous();

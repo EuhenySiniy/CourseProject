@@ -1,7 +1,7 @@
 package com.entities;
 
 public class Sample {
-    private int sampleId;
+    private long sampleId;
     private String sampleName;
     private String iban;
     private String okpo;
@@ -10,7 +10,7 @@ public class Sample {
     private String street;
     private int apartNum;
 
-    public Sample(int sampleId, String sampleName, String iban, String okpo, String appointment) {
+    public Sample(long sampleId, String sampleName, String iban, String okpo, String appointment) {
         this.sampleId = sampleId;
         this.sampleName = sampleName;
         this.iban = iban;
@@ -28,7 +28,7 @@ public class Sample {
         this.apartNum = apartNum;
     }
 
-    public int getSampleId() {
+    public long getSampleId() {
         return sampleId;
     }
 

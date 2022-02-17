@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class AddressDaoImplementation implements AddressDao {
-    private int getUserId(String email) {
-        int userId = 0;
+    private long getUserId(String email) {
+        long userId = 0;
         String sql = "SELECT user_id FROM users WHERE email = ?";
         Connection connection = Connector.getConnection();
         PreparedStatement statement = null;
@@ -45,14 +45,14 @@ public class AddressDaoImplementation implements AddressDao {
 
         while (iterator.hasNext()) {
             address = iterator.next();
-            int userId = getUserId(address.getUserLogin());
+            long userId = getUserId(address.getUserLogin());
             try {
                 statement = connection.prepareStatement(sql);
                 statement.setString(1, address.getCity());
                 statement.setString(2, address.getStreet());
                 statement.setString(3, address.getHouseNum());
                 statement.setInt(4, address.getApartmentNum());
-                statement.setInt(5, userId);
+                statement.setLong(5, userId);
                 statement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -78,16 +78,16 @@ public class AddressDaoImplementation implements AddressDao {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         UserAddress address = null;
-        int userId = getUserId(email);
+        long userId = getUserId(email);
 
         try {
             statement = connection.prepareStatement(sql);
-            statement.setInt(1, userId);
+            statement.setLong(1, userId);
             statement.setString(2, street);
             statement.setInt(3, apartNum);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                address = new UserAddress(resultSet.getInt(1),
+                address = new UserAddress(resultSet.getLong(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4),
@@ -107,16 +107,16 @@ public class AddressDaoImplementation implements AddressDao {
         Connection connection = Connector.getConnection();
         PreparedStatement statement = null;
         ResultSet resultSet = null;
-        int userId = getUserId(email);
+        long userId = getUserId(email);
         UserAddress userAddress;
         List<UserAddress> userAddresses = new ArrayList<>();
 
         try {
             statement = connection.prepareStatement(sql);
-            statement.setInt(1, userId);
+            statement.setLong(1, userId);
             resultSet = statement.executeQuery();
             while(resultSet.next()) {
-                userAddress = new UserAddress(resultSet.getInt(1),
+                userAddress = new UserAddress(resultSet.getLong(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4),
@@ -142,11 +142,11 @@ public class AddressDaoImplementation implements AddressDao {
         String sql = "DELETE FROM addresses WHERE user_id = ? AND street = ? AND apartment_num = ?";
         Connection connection = Connector.getConnection();
         PreparedStatement statement = null;
-        int userId = getUserId(email);
+        long userId = getUserId(email);
 
         try {
             statement = connection.prepareStatement(sql);
-            statement.setInt(1, userId);
+            statement.setLong(1, userId);
             statement.setString(2, street);
             statement.setInt(3, apartNum);
             statement.execute();

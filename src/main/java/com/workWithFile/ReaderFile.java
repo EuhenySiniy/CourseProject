@@ -97,4 +97,30 @@ public class ReaderFile {
         return sampleInfo;
     }
 
+    public List<String> getPaymentInfo() {
+        BufferedReader reader = null;
+        List<String> paymentInfo = new ArrayList<>();
+        try {
+            reader = new BufferedReader(new FileReader(path));
+            while((fileContent = reader.readLine()) != null) {
+                temp = fileContent.split(",");
+                if (temp[0].equals("PAY")) {
+                    for (int i = 1; i < temp.length; i++) {
+                        paymentInfo.add(temp[i]);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return paymentInfo;
+    }
 }

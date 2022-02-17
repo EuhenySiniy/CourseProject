@@ -1,7 +1,7 @@
 package com.entities;
 
 public class UserAddress {
-    private int id;
+    private long id;
     private String city;
     private String street;
     private String houseNum;
@@ -16,7 +16,7 @@ public class UserAddress {
         this.userLogin = userLogin;
     }
 
-    public UserAddress (int id, String city, String street, String houseNum, int apartmentNum) {
+    public UserAddress (long id, String city, String street, String houseNum, int apartmentNum) {
         this.id = id;
         this.city = city;
         this.street = street;
@@ -24,7 +24,7 @@ public class UserAddress {
         this.apartmentNum = apartmentNum;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

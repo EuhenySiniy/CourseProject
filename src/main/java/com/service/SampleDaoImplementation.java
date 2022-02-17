@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class SampleDaoImplementation implements SampleDao {
-    private int getAddressId(String email, String street, int apartNum) {
-        int addressId = 0;
-        int userId;
+    private long getAddressId(String email, String street, int apartNum) {
+        long addressId = 0;
+        long userId;
         String getUserId = "SELECT user_id FROM users WHERE email = ?";
         String getAddrId = "SELECT address_id FROM addresses WHERE user_id = ? AND street = ? AND apartment_num = ?";
         Connection connection = Connector.getConnection();
@@ -26,14 +26,14 @@ public class SampleDaoImplementation implements SampleDao {
             statement.setString(1, email);
             resultSet = statement.executeQuery();
             resultSet.next();
-            userId = resultSet.getInt(1);
+            userId = resultSet.getLong(1);
             statement = connection.prepareStatement(getAddrId);
-            statement.setInt(1, userId);
+            statement.setLong(1, userId);
             statement.setString(2, street);
             statement.setInt(3, apartNum);
             resultSet = statement.executeQuery();
             resultSet.next();
-            addressId = resultSet.getInt(1);
+            addressId = resultSet.getLong(1);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -53,14 +53,14 @@ public class SampleDaoImplementation implements SampleDao {
 
         while (iterator.hasNext()) {
             sample = iterator.next();
-            int addressId = getAddressId(sample.getUserLogin(), sample.getStreet(), sample.getApartNum());
+            long addressId = getAddressId(sample.getUserLogin(), sample.getStreet(), sample.getApartNum());
             try {
                 statement = connection.prepareStatement(sql);
                 statement.setString(1, sample.getSampleName());
                 statement.setString(2, sample.getIban());
                 statement.setString(3, sample.getOkpo());
                 statement.setString(4, sample.getAppointment());
-                statement.setInt(5, addressId);
+                statement.setLong(5, addressId);
                 statement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -92,7 +92,7 @@ public class SampleDaoImplementation implements SampleDao {
             statement.setString(1, iban);
             resultSet = statement.executeQuery();
             resultSet.next();
-            sample = new Sample(resultSet.getInt(1),
+            sample = new Sample(resultSet.getLong(1),
                         resultSet.getString(2),
                         resultSet.getString(3),
                         resultSet.getString(4),
@@ -117,7 +117,7 @@ public class SampleDaoImplementation implements SampleDao {
         String sql = "DELETE FROM samples WHERE iban = ? AND address_id = ?";
         Connection connection = Connector.getConnection();
         PreparedStatement statement = null;
-        int addressId = getAddressId(email, street, apartNum);
+        long addressId = getAddressId(email, street, apartNum);
 
         try {
             statement = connection.prepareStatement(sql);

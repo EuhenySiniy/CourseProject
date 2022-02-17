@@ -1,6 +1,7 @@
 package com.entities;
 
 public class User {
+    private long userId;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -16,6 +17,14 @@ public class User {
     }
 
     public User() {
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
