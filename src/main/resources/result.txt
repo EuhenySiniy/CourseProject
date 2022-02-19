@@ -1,0 +1,152 @@
+Получены данные о новом пользователе:
+Имя: Елизавета, отчество: Анатольевна, фамилия: Степанова, email:dockerpro@icloud.com, телефон: 0504841111
+Время выполнения: 15мс.
+
+Добавляем информацию о новом пользователе в базу данных: 
+Имя: Елизавета, отчество: Анатольевна, фамилия: Степанова, email:dockerpro@icloud.com, телефон: 0504841111
+Время выполнения: 235мс.
+
+Получены данные о новом адресе: 
+Город: Киев, улица: ул.Автозаводская, номер дома: 54, квартира: 19, логин пользователя: dockerpro@icloud.com
+Город: Вишневое, улица: ул.Науки, номер дома: 17, квартира: 5, логин пользователя: dockerpro@icloud.com
+Время выполнения: 0мс.
+
+Добавляем адресс в базу данных: 
+Город: Киев, улица: ул.Автозаводская, номер дома: 54, квартира: 19, id пользователя: 1000001
+Город: Вишневое, улица: ул.Науки, номер дома: 17, квартира: 5, id пользователя: 1000001
+Время выполнения: 140мс.
+
+Получены данные о новом шаблоне: 
+Наименование: Gas Company, Iban: UA455695400000026204777456632, ОКПО: 87999963, назначение платежа: Payment for gas, логин: dockerpro@icloud.com, улица: ул.Автозаводская, номер квартиры: 19
+Наименование: SpaceX, Iban: UA543054820000026035304821893, ОКПО: 42082379, назначение платежа: Payment for communication, логин: dockerpro@icloud.com, улица: ул.Автозаводская, номер квартиры: 19
+Наименование: Light supplier, Iban: UA723052990000026002050254346, ОКПО: 39968744, назначение платежа: Payment for light, логин: dockerpro@icloud.com, улица: ул.Науки, номер квартиры: 5
+Наименование: Water supplier, Iban: UA800147550000045667458566546, ОКПО: 56678996, назначение платежа: Payment for cold water, логин: dockerpro@icloud.com, улица: ул.Науки, номер квартиры: 5
+Время выполнения: 16мс.
+
+Добавляем информацию о новом шаблоне в базу данных: 
+Наименование: Gas Company, Iban: UA455695400000026204777456632, ОКПО: 87999963, назначение платежа: Payment for gas, id адреса: 2000001
+Наименование: SpaceX, Iban: UA543054820000026035304821893, ОКПО: 42082379, назначение платежа: Payment for communication, id адреса: 2000001
+Наименование: Light supplier, Iban: UA723052990000026002050254346, ОКПО: 39968744, назначение платежа: Payment for light, id адреса: 2000002
+Наименование: Water supplier, Iban: UA800147550000045667458566546, ОКПО: 56678996, назначение платежа: Payment for cold water, id адреса: 2000002
+Время выполнения: 156мс.
+
+Получены данные о новом платеже: 
+id шаблона: 120001 номер карты: 5375414100000000 сумма оплаты: 199.99
+id шаблона: 120001 номер карты: 4441114400000000 сумма оплаты: 87.68
+id шаблона: 120002 номер карты: 4441114400000000 сумма оплаты: 200.0
+id шаблона: 120002 номер карты: 4441114400000000 сумма оплаты: 200.0
+id шаблона: 120003 номер карты: 4441114400000000 сумма оплаты: 759.2
+id шаблона: 120003 номер карты: 4441114400000000 сумма оплаты: 934.55
+id шаблона: 120004 номер карты: 4441114400000000 сумма оплаты: 149.0
+id шаблона: 120004 номер карты: 4441114400000000 сумма оплаты: 229.0
+Время выполнения: 0мс.
+
+Добавляем данные о новом платеже в базу данных: 
+id шаблона: 120001 номер карты: 5375414100000000 сумма оплаты: 199.99
+id шаблона: 120001 номер карты: 4441114400000000 сумма оплаты: 87.68
+id шаблона: 120002 номер карты: 4441114400000000 сумма оплаты: 200.0
+id шаблона: 120002 номер карты: 4441114400000000 сумма оплаты: 200.0
+id шаблона: 120003 номер карты: 4441114400000000 сумма оплаты: 759.2
+id шаблона: 120003 номер карты: 4441114400000000 сумма оплаты: 934.55
+id шаблона: 120004 номер карты: 4441114400000000 сумма оплаты: 149.0
+id шаблона: 120004 номер карты: 4441114400000000 сумма оплаты: 229.0
+Время выполнения: 31мс.
+
+Получаем платежи со статусом новый: 
+Payment{paymentId=200001, sampleId=120001, cardNum=5375414100000000, sum=199.99, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200004, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200005, sampleId=120003, cardNum=4441114400000000, sum=759.2, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200006, sampleId=120003, cardNum=4441114400000000, sum=934.55, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200007, sampleId=120004, cardNum=4441114400000000, sum=149.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200008, sampleId=120004, cardNum=4441114400000000, sum=229.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Проводим платежи: 
+Время выполнения платежей: 32мс.
+Время проверки платежей: 63мс.
+
+Получаем платежи со статусом новый: 
+Payment{paymentId=200001, sampleId=120001, cardNum=5375414100000000, sum=199.99, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200004, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200005, sampleId=120003, cardNum=4441114400000000, sum=759.2, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200006, sampleId=120003, cardNum=4441114400000000, sum=934.55, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200007, sampleId=120004, cardNum=4441114400000000, sum=149.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200008, sampleId=120004, cardNum=4441114400000000, sum=229.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Проводим платежи: 
+Время выполнения платежей: 16мс.
+Время проверки платежей: 47мс.
+
+Получаем платежи со статусом новый: 
+Payment{paymentId=200001, sampleId=120001, cardNum=5375414100000000, sum=199.99, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200004, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200005, sampleId=120003, cardNum=4441114400000000, sum=759.2, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200006, sampleId=120003, cardNum=4441114400000000, sum=934.55, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200007, sampleId=120004, cardNum=4441114400000000, sum=149.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Payment{paymentId=200008, sampleId=120004, cardNum=4441114400000000, sum=229.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:12.0}
+Проводим платежи: 
+Платеж id: 200001 статус оплаты: Paid
+Платеж id: 200002 статус оплаты: New
+Платеж id: 200003 статус оплаты: New
+Платеж id: 200004 статус оплаты: Paid
+Платеж id: 200005 статус оплаты: New
+Платеж id: 200006 статус оплаты: Rejected
+Платеж id: 200007 статус оплаты: Rejected
+Платеж id: 200008 статус оплаты: Paid
+Время выполнения платежей: 32мс.
+Время проверки платежей: 63мс.
+
+Получаем платежи со статусом новый: 
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200005, sampleId=120003, cardNum=4441114400000000, sum=759.2, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Проводим платежи: 
+Платеж id: 200002 статус оплаты: New
+Платеж id: 200003 статус оплаты: New
+Платеж id: 200005 статус оплаты: Rejected
+Время выполнения платежей: 46мс.
+Время проверки платежей: 62мс.
+
+Получаем платежи со статусом новый: 
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:16.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='New', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:16.0}
+Проводим платежи: 
+Платеж id: 200002 статус оплаты: Rejected
+Платеж id: 200003 статус оплаты: Rejected
+Время выполнения платежей: 47мс.
+Время проверки платежей: 62мс.
+
+Получаем платежи со статусом новый: 
+Новых платежей нет.
+Время проверки платежей: 15мс.
+
+Таблица пользователей: 
+User{userId=1000001, firstName='Елизавета', middleName='Анатольевна', lastName='Степанова', email='dockerpro@icloud.com', tel='0504841111'}
+Время выполнения: 47мс.
+
+Таблица адресов: 
+UserAddress{id=2000001, city='Киев', street='ул.Автозаводская', houseNum='54', apartmentNum=19, userId=1000001}
+UserAddress{id=2000002, city='Вишневое', street='ул.Науки', houseNum='17', apartmentNum=5, userId=1000001}
+Время выполнения: 31мс.
+
+Таблица шаблонов: 
+Sample{sampleId=120001, sampleName='Gas Company', iban='UA455695400000026204777456632', okpo='87999963', appointment='Payment for gas', addressId=2000001}
+Sample{sampleId=120002, sampleName='SpaceX', iban='UA543054820000026035304821893', okpo='42082379', appointment='Payment for communication', addressId=2000001}
+Sample{sampleId=120003, sampleName='Light supplier', iban='UA723052990000026002050254346', okpo='39968744', appointment='Payment for light', addressId=2000002}
+Sample{sampleId=120004, sampleName='Water supplier', iban='UA800147550000045667458566546', okpo='56678996', appointment='Payment for cold water', addressId=2000002}
+Время выполнения: 32мс.
+
+Таблица платежей: 
+Payment{paymentId=200001, sampleId=120001, cardNum=5375414100000000, sum=199.99, status='Paid', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200004, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='Paid', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200006, sampleId=120003, cardNum=4441114400000000, sum=934.55, status='Rejected', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200007, sampleId=120004, cardNum=4441114400000000, sum=149.0, status='Rejected', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200008, sampleId=120004, cardNum=4441114400000000, sum=229.0, status='Paid', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:15.0}
+Payment{paymentId=200005, sampleId=120003, cardNum=4441114400000000, sum=759.2, status='Rejected', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:16.0}
+Payment{paymentId=200002, sampleId=120001, cardNum=4441114400000000, sum=87.68, status='Rejected', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:17.0}
+Payment{paymentId=200003, sampleId=120002, cardNum=4441114400000000, sum=200.0, status='Rejected', dateCreate=2022-02-20 00:03:12.0, dateStatus=2022-02-20 00:03:17.0}
+Время выполнения: 31мс.
+
