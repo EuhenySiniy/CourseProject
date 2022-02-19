@@ -7,9 +7,9 @@ import java.util.List;
 public interface PaymentDao {
     boolean createNewPayment(List<Payment> payments);
 
-    Payment getPayment(long paymentId);
+    Payment getPaymentById(long paymentId);
 
-    boolean updatePaymentStatus(long paymentId);
+    boolean updateStatusPayment(List<Payment> payments);
 
-    boolean deletePayment(long paymentId);
+    List<Payment> getNewPayments();
 }

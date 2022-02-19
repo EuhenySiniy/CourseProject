@@ -43,13 +43,9 @@ create table payments
 (
     payment_id bigint primary key default (nextval('payment_id')),
     sample_id bigint references samples (sample_id) on delete cascade,
-    card_number integer not null,
-    sum numeric(9,2) not null,
-    status varchar(8) not null,
-    date_create timestamp default now(),
-    date_status timestamp default now()
+    card_number bigint not null,
+    sum_payment numeric(9,2) not null,
+    status varchar(8) not null default ('New'),
+    date_create timestamp(0) default now(),
+    date_status timestamp(0) default now()
 );
-
-
-
-

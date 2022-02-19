@@ -7,9 +7,7 @@ import java.util.List;
 public interface UserDao {
     boolean createNewUsers(List<User> userList);
 
-    User getUserFromDB(String email);
+    User getUserByLogin(String email);
 
-    boolean updateUser(User user);
-
-    boolean deleteUser(String email);
+    boolean deleteUserByLogin(String email);
 }

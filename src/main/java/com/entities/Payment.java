@@ -3,11 +3,11 @@ package com.entities;
 public class Payment {
     private long paymentId;
     private long sampleId;
-    private int cardNum;
+    private long cardNum;
     private double sum;
     private String status;
 
-    public Payment(long paymentId, long sampleId, int cardNum, double sum, String status) {
+    public Payment(long paymentId, long sampleId, long cardNum, double sum, String status) {
         this.paymentId = paymentId;
         this.sampleId = sampleId;
         this.cardNum = cardNum;
@@ -15,7 +15,7 @@ public class Payment {
         this.status = status;
     }
 
-    public Payment(long sampleId, int cardNum, double sum) {
+    public Payment(long sampleId, long cardNum, double sum) {
         this.sampleId = sampleId;
         this.cardNum = cardNum;
         this.sum = sum;
@@ -37,7 +37,7 @@ public class Payment {
         this.sampleId = sampleId;
     }
 
-    public int getCardNum() {
+    public long getCardNum() {
         return cardNum;
     }
 
