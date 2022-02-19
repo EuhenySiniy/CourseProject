@@ -3,6 +3,11 @@ drop table if exists addresses;
 drop table if exists samples;
 drop table if exists payments;
 
+drop sequence if exists user_id;
+drop sequence if exists address_id;
+drop sequence if exists sample_id;
+drop sequence if exists payment_id;
+
 create sequence user_id start 1000001 minvalue 1000001;
 create sequence address_id start 2000001 minvalue 2000001;
 create sequence sample_id start 120001 minvalue 120001;

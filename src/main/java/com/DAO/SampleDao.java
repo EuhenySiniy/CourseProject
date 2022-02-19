@@ -1,5 +1,6 @@
 package com.DAO;
 
+import com.entities.Payment;
 import com.entities.Sample;
 
 import java.util.List;
@@ -10,4 +11,6 @@ public interface SampleDao {
     Sample getSampleById(long id);
 
     boolean deleteSampleById(long id);
+
+    boolean getAllSamples();
 }

@@ -25,10 +25,6 @@ public class User {
         this.tel = tel;
     }
 
-    public long getUserId() {
-        return userId;
-    }
-
     public String getFirstName() {
         return firstName;
     }

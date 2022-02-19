@@ -9,6 +9,16 @@ public class Sample {
     private String userLogin;
     private String street;
     private int apartNum;
+    private long addressId;
+
+    public Sample(long sampleId, String sampleName, String iban, String okpo, String appointment, long addressId) {
+        this.sampleId = sampleId;
+        this.sampleName = sampleName;
+        this.iban = iban;
+        this.okpo = okpo;
+        this.appointment = appointment;
+        this.addressId = addressId;
+    }
 
     public Sample(long sampleId, String sampleName, String iban, String okpo, String appointment) {
         this.sampleId = sampleId;
@@ -26,10 +36,6 @@ public class Sample {
         this.userLogin = userLogin;
         this.street = street;
         this.apartNum = apartNum;
-    }
-
-    public long getSampleId() {
-        return sampleId;
     }
 
     public String getSampleName() {
@@ -63,10 +69,12 @@ public class Sample {
     @Override
     public String toString() {
         return "Sample{" +
-                "sampleName='" + sampleName + '\'' +
+                "sampleId=" + sampleId +
+                ", sampleName='" + sampleName + '\'' +
                 ", iban='" + iban + '\'' +
                 ", okpo='" + okpo + '\'' +
                 ", appointment='" + appointment + '\'' +
+                ", addressId=" + addressId +
                 '}';
     }
 }

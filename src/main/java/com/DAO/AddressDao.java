@@ -10,4 +10,6 @@ public interface AddressDao {
     List<UserAddress> getAllUserAddresses(String email);
 
     boolean deleteAddressById(long addressId);
+
+    boolean getAllAddress();
 }

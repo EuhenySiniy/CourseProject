@@ -2,15 +2,13 @@ package com.workWithFile;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ReaderFile {
-    private String path;
+    private final String path;
     private String fileContent;
     private String[] temp;
-
-    public ReaderFile(){
-    }
 
     public ReaderFile(String path) {
         this.path = path;
@@ -24,9 +22,7 @@ public class ReaderFile {
             while ((fileContent = reader.readLine()) != null) {
                 temp = fileContent.split(",");
                 if (temp[0].equals("REGISTRATION")) {
-                    for(int i = 1; i < temp.length; i++) {
-                        userInfo.add(temp[i]);
-                    }
+                    userInfo.addAll(Arrays.asList(temp).subList(1, temp.length));
                 }
             }
         } catch (IOException e) {
@@ -51,9 +47,7 @@ public class ReaderFile {
             while ((fileContent = reader.readLine()) != null) {
                 temp = fileContent.split(",");
                 if (temp[0].equals("ADDADDRESS")) {
-                    for(int i = 1; i < temp.length; i++) {
-                        addressInfo.add(temp[i]);
-                    }
+                    addressInfo.addAll(Arrays.asList(temp).subList(1, temp.length));
                 }
             }
         } catch (IOException e) {
@@ -78,9 +72,7 @@ public class ReaderFile {
             while ((fileContent = reader.readLine()) != null) {
                 temp = fileContent.split(",");
                 if (temp[0].equals("ADDSAMPLE")) {
-                    for(int i = 1; i < temp.length; i++) {
-                        sampleInfo.add(temp[i]);
-                    }
+                    sampleInfo.addAll(Arrays.asList(temp).subList(1, temp.length));
                 }
             }
         } catch (IOException e) {
@@ -105,9 +97,7 @@ public class ReaderFile {
             while((fileContent = reader.readLine()) != null) {
                 temp = fileContent.split(",");
                 if (temp[0].equals("PAY")) {
-                    for (int i = 1; i < temp.length; i++) {
-                        paymentInfo.add(temp[i]);
-                    }
+                    paymentInfo.addAll(Arrays.asList(temp).subList(1, temp.length));
                 }
             }
         } catch (IOException e) {

@@ -7,6 +7,16 @@ public class UserAddress {
     private String houseNum;
     private int apartmentNum;
     private String userLogin;
+    private long userId;
+
+    public UserAddress(long id, String city, String street, String houseNum, int apartmentNum, long userId) {
+        this.id = id;
+        this.city = city;
+        this.street = street;
+        this.houseNum = houseNum;
+        this.apartmentNum = apartmentNum;
+        this.userId = userId;
+    }
 
     public UserAddress (String city, String street, String houseNum, int apartmentNum, String userLogin) {
         this.city = city;
@@ -24,61 +34,35 @@ public class UserAddress {
         this.apartmentNum = apartmentNum;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getCity() {
         return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
     public String getHouseNum() {
         return houseNum;
-    }
-
-    public void setHouseNum(String houseNum) {
-        this.houseNum = houseNum;
     }
 
     public int getApartmentNum() {
         return apartmentNum;
     }
 
-    public void setApartmentNum(int apartmentNum) {
-        this.apartmentNum = apartmentNum;
-    }
-
     public String getUserLogin() {
         return userLogin;
-    }
-
-    public void setUserLogin(String userLogin) {
-        this.userLogin = userLogin;
     }
 
     @Override
     public String toString() {
         return "UserAddress{" +
-                "city='" + city + '\'' +
+                "id=" + id +
+                ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
-                ", houseNum=" + houseNum +
+                ", houseNum='" + houseNum + '\'' +
                 ", apartmentNum=" + apartmentNum +
+                ", userId=" + userId +
                 '}';
     }
 }
