@@ -1,4 +1,4 @@
-package com.adding;
+package com.entities.adding;
 
 import com.entities.Payment;
 import com.workWithFile.WriteResultInFile;

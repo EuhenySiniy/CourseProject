@@ -1,4 +1,4 @@
-package com.adding;
+package com.entities.adding;
 
 import com.entities.UserAddress;
 import com.workWithFile.WriteResultInFile;

@@ -1,10 +1,10 @@
 package com;
 
-import com.adding.AddingPayment;
-import com.adding.AddingSample;
+import com.entities.adding.AddingPayment;
+import com.entities.adding.AddingSample;
 import com.service.AddressDaoImplementation;
-import com.adding.AddingAddress;
-import com.adding.RegistrationUser;
+import com.entities.adding.AddingAddress;
+import com.entities.adding.RegistrationUser;
 import com.service.PaymentDaoImplementation;
 import com.service.SampleDaoImplementation;
 import com.service.UserDaoImplementation;
