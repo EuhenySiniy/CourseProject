@@ -35,10 +35,10 @@ public class PaymentProcessing implements Runnable{
         while (newIsPresent) {
             try {
                 Thread.sleep(1000);
+                checkNewPayment();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            checkNewPayment();
         }
         userDAO.getAllUsers();
         addressDao.getAllAddress();

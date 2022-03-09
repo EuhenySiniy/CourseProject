@@ -23,14 +23,14 @@ public class Start {
         SampleDaoImplementation sampleDao = new SampleDaoImplementation();
         PaymentDaoImplementation paymentDao = new PaymentDaoImplementation();
         Thread processing = new Thread(new PaymentProcessing());
+        userDAO.createNewUsers(registrationNewUser.registerUser(reader.getUsersInfo()));
+        addressDao.createNewAddress(address.addingNewAddress(reader.getAddressInfo()));
+        sampleDao.createNewSample(sample.addingNewSample(reader.getSampleInfo()));
+        paymentDao.createNewPayment(payment.addNewPayment(reader.getPaymentInfo()));
         try {
             processing.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        userDAO.createNewUsers(registrationNewUser.registerUser(reader.getUsersInfo()));
-        addressDao.createNewAddress(address.addingNewAddress(reader.getAddressInfo()));
-        sampleDao.createNewSample(sample.addingNewSample(reader.getSampleInfo()));
-        paymentDao.createNewPayment(payment.addNewPayment(reader.getPaymentInfo()));
     }
 }
